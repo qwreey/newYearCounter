@@ -30,3 +30,6 @@ body {
 	height: auto;
 	font-size: 3.5em;
 }
+#title pre {
+	font-family: "Noto Sans KR", sans-serif;
+}

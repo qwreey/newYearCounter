@@ -4,7 +4,7 @@ function remaindTime() {
     let endSec = end.getTime()
     let nowSec = now.getTime()
     if (nowSec < endSec) {
-        document.querySelector("#title p").innerHTML = "새해까지 남은시간"
+        document.querySelector("#title pre").innerHTML = "새해까지\n남은시간"
         document.querySelector("#timer").style.display = "flex"
         let left = new Date(endSec-nowSec)
         let sec  = left.getSeconds()

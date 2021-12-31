@@ -12,10 +12,10 @@ local fs = require "fs"
 local headerBase = require "app.headerBase" ---@module "app/headerBase"
 --#endregion require modules
 
-local errNotfoundHtml = fs.readFileSync(settings.baseRoot:format("404.html"))
+local errNotfoundHtml = fs.readFileSync(settings.baseRoot:format("404.html")) or ""
 local errNotfoundHeader = headerBase.notFound(errNotfoundHtml)
-local errHtml = fs.readFileSync(settings.baseRoot:format("500.html"))
-local errHeader = headerBase.notFound(errHtml)
+local errHtml = fs.readFileSync(settings.baseRoot:format("500.html")) or ""
+local errHeader = headerBase.err(errHtml)
 
 --#region server
 local baseRoot = settings.baseRoot
