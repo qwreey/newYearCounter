@@ -1,5 +1,35 @@
 
+html,body {
+	width: 100%;
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+}
+body {
+	min-height: 100%;
+}
+
+#timer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+}
+
 #base {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+#title {
+	width: auto;
+	height: auto;
+	font-size: 4.2em;
 }
