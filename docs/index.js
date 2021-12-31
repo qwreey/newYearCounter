@@ -1,17 +1,16 @@
 function remaindTime() {
     let now = new Date()
-    let end = new Date(2022, 1, 1, 0, 0, 0)
+    let end = new Date(2021, 12, 31, 24, 0, 0)
     let endSec = end.getTime()
     let nowSec = now.getTime()
     if (nowSec < endSec) {
         document.querySelector("#title p").innerHTML = "새해까지 남은시간"
         document.querySelector("#timer").style.display = "flex"
 
-        let rawSec = parseInt((endSec-nowSec)/1000)
-        console.log(rawSec)
-        let sec  = parseInt(rawSec % 60)
-        let min  = parseInt(rawSec / 60 % 60)
-        let hour = parseInt(rawSec / 3600 % 24)
+        let left = new Date(endSec-nowSec)
+        let sec  = left.getSeconds()
+        let min  = left.getMinutes()
+        let hour = left.getUTCHours()
 
         if (hour < 10) {
             hour = "0" + hour;
