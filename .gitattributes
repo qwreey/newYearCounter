@@ -1,2 +1,2 @@
-deps/** linguist-detectable=false
-libs/** linguist-detectable=false
+deps/** linguist-vendored
+libs/** linguist-vendored
