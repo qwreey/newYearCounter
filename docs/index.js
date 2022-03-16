@@ -1,6 +1,6 @@
 function remaindTime() {
     let now = new Date()
-    let end = new Date(2022, 12, 31, 24, 0, 0)
+    let end = new Date(2023,0,0)
     let endSec = end.getTime()
     let nowSec = now.getTime()
     if (nowSec < endSec) {
